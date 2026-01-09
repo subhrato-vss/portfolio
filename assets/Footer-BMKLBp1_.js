@@ -1,0 +1,1 @@
+import{j as t,B as e}from"./index-7Gm_tF37.js";function o(){return t.jsxs(e,{sx:{textAlign:"center",py:4,color:"#64748b"},children:["© ",new Date().getFullYear()," Subhrato Singh"]})}export{o as default};
