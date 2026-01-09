@@ -12,7 +12,7 @@ const skills = {
 
 export default function Skills() {
     return (
-        <Section id="skills" title="Technical Skills">
+        <Section id="skills" title="Technical Skills" isMotion={false}>
             {Object.keys(skills).map((group) => (
                 <Box key={group} sx={{ mb: 3 }}>
                     <Typography sx={{ fontWeight: 600, mb: 1 }}>{group}</Typography>

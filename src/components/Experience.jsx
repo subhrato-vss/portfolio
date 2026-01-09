@@ -9,7 +9,7 @@ const data = [
 
 export default function Experience() {
   return (
-    <Section id="experience" title="Experience">
+    <Section id="experience" title="Experience" isMotion={false}>
       {data.map((e, i) => (
         <Card
           key={i}

@@ -1,20 +1,20 @@
-import React, { Suspense, lazy } from "react";
 import { Box, CircularProgress, Typography } from "@mui/material";
+import React, { Suspense, lazy } from "react";
 import { motion } from "framer-motion";
 
-// Lazy imports
-const SectionSkeleton = lazy(() => import("./components/SectionSkeleton"));
+import SectionSkeleton from "./components/SectionSkeleton";
 import ScrollProgress from "./components/ScrollProgress";
 
-const Navbar = lazy(() => import("./components/Navbar"));
-const Hero = lazy(() => import("./components/Hero"));
-const About = lazy(() => import("./components/About"));
-const Skills = lazy(() => import("./components/Skills"));
+// Lazy imports
 const Experience = lazy(() => import("./components/Experience"));
-const Projects = lazy(() => import("./components/Projects"));
 const Education = lazy(() => import("./components/Education"));
+const Projects = lazy(() => import("./components/Projects"));
 const Contact = lazy(() => import("./components/Contact"));
+const Navbar = lazy(() => import("./components/Navbar"));
+const Skills = lazy(() => import("./components/Skills"));
 const Footer = lazy(() => import("./components/Footer"));
+const About = lazy(() => import("./components/About"));
+const Hero = lazy(() => import("./components/Hero"));
 
 /* ---------------- Animated Loader ---------------- */
 
@@ -57,7 +57,7 @@ export default function App() {
     <Box sx={{ bgcolor: "#0b1120", color: "#e5e7eb", fontFamily: "'Inter', sans-serif" }}>
       <Suspense fallback={<PageLoader />}>
         <ScrollProgress />
-      
+
         <Navbar />
         <Hero />
 
