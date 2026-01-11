@@ -1,94 +1,37 @@
-import { Box, CircularProgress, Typography } from "@mui/material";
-import React, { Suspense, lazy } from "react";
 import { motion } from "framer-motion";
+import React, { lazy, Suspense } from 'react'
+import { Box, CircularProgress, Typography } from "@mui/material";
 
+// import PageLoader from "./components/PageLoader";
+import ScrollToTop from "./components/ScrollToTop";
 import SectionSkeleton from "./components/SectionSkeleton";
-import ScrollProgress from "./components/ScrollProgress";
 
-// Lazy imports
-const Experience = lazy(() => import("./components/Experience"));
-const Education = lazy(() => import("./components/Education"));
-const Projects = lazy(() => import("./components/Projects"));
-const Contact = lazy(() => import("./components/Contact"));
-const Navbar = lazy(() => import("./components/Navbar"));
-const Skills = lazy(() => import("./components/Skills"));
+// ==== Lazy Imports ====
+// const Chat = lazy(() => import("./components/Chat"));
 const Footer = lazy(() => import("./components/Footer"));
-const About = lazy(() => import("./components/About"));
-const Hero = lazy(() => import("./components/Hero"));
+// const Breadcrumb = lazy(() => import("./components/Breadcrumb"));
+const MainSection = lazy(() => import("./components/MainSection"));
 
-/* ---------------- Animated Loader ---------------- */
-
-function PageLoader() {
+const App = () => {
   return (
-    <Box
-      sx={{
-        minHeight: "100vh",
-        bgcolor: "#0b1120",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center"
-      }}
-    >
-      <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ repeat: Infinity, duration: 1.2, ease: "linear" }}
-      >
-        <CircularProgress size={60} thickness={4} />
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
-      >
-        <Typography sx={{ mt: 3, color: "#94a3b8" }}>
-          Loading portfolio...
-        </Typography>
-      </motion.div>
-    </Box>
-  );
-}
-
-/* ---------------- App ---------------- */
-
-export default function App() {
-  return (
-    <Box sx={{ bgcolor: "#0b1120", color: "#e5e7eb", fontFamily: "'Inter', sans-serif" }}>
-      <Suspense fallback={<PageLoader />}>
-        <ScrollProgress />
-
-        <Navbar />
-        <Hero />
-
+    <>
+      <Box sx={{ bgcolor: "#0b1120", color: "#e5e7eb", fontFamily: "'Inter', sans-serif" }}>
         <Suspense fallback={<SectionSkeleton />}>
-          <About />
-        </Suspense>
+          {/* <Breadcrumb /> */}
 
-        <Suspense fallback={<SectionSkeleton />}>
-          <Skills />
-        </Suspense>
+          <MainSection />
 
-        <Suspense fallback={<SectionSkeleton />}>
-          <Experience />
-        </Suspense>
-
-        <Suspense fallback={<SectionSkeleton />}>
-          <Projects />
-        </Suspense>
-
-        <Suspense fallback={<SectionSkeleton />}>
-          <Education />
-        </Suspense>
-
-        <Suspense fallback={<SectionSkeleton />}>
-          <Contact />
-        </Suspense>
-
-        <Suspense fallback={<SectionSkeleton />}>
           <Footer />
+
+          {/* <Suspense fallback={<SectionSkeleton />}>
+            <Chat />
+          </Suspense> */}
+
+          <ScrollToTop />
         </Suspense>
-      </Suspense>
-    </Box>
-  );
+      </Box>
+    </>
+  )
 }
+
+export default App

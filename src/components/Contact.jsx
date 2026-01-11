@@ -1,130 +1,139 @@
-import { Box, Chip, Typography, Card, CardContent, Button, Stack } from "@mui/material";
-import EmailIcon from "@mui/icons-material/Email";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import PhoneIcon from "@mui/icons-material/Phone";
-import DownloadIcon from "@mui/icons-material/Download";
-import { motion } from "framer-motion";
+import React from 'react'
 
-import Resume from "../assets/Subhrato_Singh_resume.pdf";
-import Section from "./Section";
-
-const MotionChip = motion(Chip);
-const MotionCard = motion(Card);
-
-export default function Contact() {
+function Contact() {
     return (
-        <Section id="contact" title="Contact">
+        <div className="tmp-contact-area" id="contacts">
+            <div className="inner">
+                <div className="contact-get-in-touch-wrap">
 
-            {/* FLOATING CTA CARD */}
-            <MotionCard
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                sx={{
-                    bgcolor: "#020617",
-                    border: "1px solid #1e293b",
-                    maxWidth: 650,
-                    mx: "auto",
-                    boxShadow: "0 20px 40px rgba(0,0,0,0.4)"
-                }}
-            >
-                <CardContent sx={{ textAlign: "center" }}>
-                    <Typography variant="h5" sx={{ color: "#e5e7eb", fontWeight: 700 }}>
-                        Let's build something great 🚀
-                    </Typography>
+                    <div className="section-head text-align-left mb--50">
+                        <h2 className="custom-title mb--20 tmp-scroll-trigger tmp-fade-in animation-order-1">
+                            GET IN TOUCH{" "}
+                            <span>
+                                <img
+                                    src="assets/images/custom-line/custom-line.png"
+                                    alt="custom-line"
+                                />
+                            </span>
+                        </h2>
 
-                    <Typography sx={{ color: "#94a3b8", mt: 1, mb: 3 }}>
-                        Open to full-time roles and freelance opportunities.
-                    </Typography>
+                        <h2 className="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
+                            Elevate your brand with a the
+                        </h2>
 
-                    {/* CONTACT CHIPS */}
-                    <Stack direction="row" justifyContent="center" flexWrap="wrap" gap={2}>
+                        <p className="description tmp-scroll-trigger tmp-fade-in animation-order-3">
+                            ished fact that a reader will be distrol acted bioiiy desig ished fact
+                            that a reader <br /> will acted ished fact that a reader will be distrol acted
+                        </p>
+                    </div>
 
-                        <ChipBox icon={<EmailIcon />} label="subhratosingh@gmail.com" />
-                        <ChipBox icon={<PhoneIcon />} label="+91 81988 50602" />
+                    <div className="contact-inner">
+                        <div className="contact-form">
 
-                        <SocialChip
-                            icon={<LinkedInIcon />}
-                            label="LinkedIn"
-                            link="https://www.linkedin.com/in/subhrato-singh/"
-                        />
+                            <div id="form-messages" className="error"></div>
 
-                        <SocialChip
-                            icon={<GitHubIcon />}
-                            label="GitHub"
-                            link="https://github.com/subhrato-vss"
-                        />
+                            <form
+                                className="tmp-dynamic-form"
+                                id="contact-form"
+                                method="POST"
+                                action="https://inversweb.com/product/html/reeni/mailer.php"
+                            >
+                                <div className="contact-form-wrapper row">
 
-                    </Stack>
+                                    <div className="col-lg-6">
+                                        <div className="form-group">
+                                            <input
+                                                className="input-field"
+                                                name="name"
+                                                id="contact-name"
+                                                placeholder="Your Name"
+                                                type="text"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
 
-                    {/* DOWNLOAD RESUME */}
-                    <Box sx={{ mt: 4 }}>
-                        <Button
-                            variant="contained"
-                            startIcon={<DownloadIcon />}
-                            href={Resume}
-                            download
-                            sx={{
-                                bgcolor: "#38bdf8",
-                                color: "#020617",
-                                fontWeight: 600,
-                                px: 4,
-                                py: 1.2,
-                                borderRadius: "10px",
-                                "&:hover": {
-                                    bgcolor: "#0ea5e9"
-                                }
-                            }}
-                        >
-                            Download Resume
-                        </Button>
-                    </Box>
-                </CardContent>
-            </MotionCard>
-        </Section>
-    );
+                                    <div className="col-lg-6">
+                                        <div className="form-group">
+                                            <input
+                                                className="input-field"
+                                                name="phone"
+                                                id="contact-phone"
+                                                placeholder="Phone Number"
+                                                type="number"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="col-lg-6">
+                                        <div className="form-group">
+                                            <input
+                                                className="input-field"
+                                                id="contact-email"
+                                                name="email"
+                                                placeholder="Your Email"
+                                                type="email"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="col-lg-6">
+                                        <div className="form-group">
+                                            <input
+                                                className="input-field"
+                                                type="text"
+                                                id="subject"
+                                                name="subject"
+                                                placeholder="Subject"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="col-lg-12">
+                                        <div className="form-group">
+                                            <textarea
+                                                className="input-field"
+                                                placeholder="Your Message"
+                                                name="message"
+                                                id="contact-message"
+                                                required
+                                            ></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div className="col-lg-12">
+                                        <div className="tmp-button-here">
+                                            <button
+                                                className="tmp-btn hover-icon-reverse radius-round w-100"
+                                                name="submit"
+                                                type="submit"
+                                                id="submit"
+                                            >
+                                                <span className="icon-reverse-wrapper">
+                                                    <span className="btn-text">Appointment Now</span>
+                                                    <span className="btn-icon">
+                                                        <i className="fa-sharp fa-regular fa-arrow-right"></i>
+                                                    </span>
+                                                    <span className="btn-icon">
+                                                        <i className="fa-sharp fa-regular fa-arrow-right"></i>
+                                                    </span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    )
 }
 
-/* ---------------- Small Reusable Components ---------------- */
-
-function ChipBox({ icon, label }) {
-    return (
-        <Chip
-            icon={icon}
-            label={label}
-            sx={{
-                bgcolor: "#020617",
-                color: "#e5e7eb",
-                border: "1px solid #1e293b",
-                fontWeight: 500
-            }}
-        />
-    );
-}
-
-function SocialChip({ icon, label, link }) {
-    return (
-        <MotionChip
-            whileHover={{ scale: 1.08, y: -3 }}
-            transition={{ type: "spring", stiffness: 300 }}
-            icon={icon}
-            label={label}
-            component="a"
-            href={link}
-            target="_blank"
-            clickable
-            sx={{
-                bgcolor: "#020617",
-                color: "#e5e7eb",
-                border: "1px solid #1e293b",
-                fontWeight: 500,
-                "&:hover": {
-                    borderColor: "#38bdf8",
-                    color: "#38bdf8"
-                }
-            }}
-        />
-    );
-}
+export default Contact

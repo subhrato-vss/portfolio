@@ -1,5 +1,16 @@
+:root {
+    --primary-color: #FF014F;
+}
 * {
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
+    }
+    
+    .text-justify {
+        text-align: justify;
+    }
+    
+    .primaryColor {
+        color: var(--primary-color) !important;
 }
