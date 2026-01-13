@@ -1,16 +1,46 @@
 :root {
     --primary-color: #FF014F;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
-    
-    .text-justify {
-        text-align: justify;
-    }
-    
-    .primaryColor {
-        color: var(--primary-color) !important;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.primaryColor {
+    color: var(--primary-color) !important;
+}
+/* List style */
+ul.custom-list {
+    margin-left: 1.5rem;
+}
+
+ul.custom-list li {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+ul.custom-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+ul.custom-list li::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 10px;
 }

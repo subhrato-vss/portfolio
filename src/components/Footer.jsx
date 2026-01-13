@@ -8,22 +8,26 @@ function Footer() {
                     <div className="col-lg-12">
                         <div className="footer-area text-center">
 
-                            {/* <div className="logo">
-                  <a href="/">
-                    <img
-                      src="/assets/images/favicon.png"
-                      alt="Subhrato Singh | Full Stack Developer Portfolio"
-                    />
-                  </a>
-                </div> */}
+                            <div className="logo">
+                                {/* <a href="/">
+                                    <img
+                                        src="/assets/images/favicon.png"
+                                        alt="Subhrato Singh | Full Stack Developer Portfolio"
+                                    />
+                                </a> */}
+                                <h4 className='primaryColor'>
+                                    Thanks for visiting — let's build something great together.
+                                </h4>
+                            </div>
 
                             <p className="description mt--30">
                                 © {new Date().getFullYear()} {" "}
                                 <a
                                     href="/"
                                 >
-                                    Subhrato Singh
+                                    Subhrato Singh.
                                 </a>
+                                {' '}All rights reserved.
                             </p>
 
                         </div>

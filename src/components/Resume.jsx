@@ -1,11 +1,77 @@
-import React from 'react'
+import { frontend, backend } from "../data/resume";
 
 function Resume() {
     return (
         <div className="tmp-resume-area" id="resume">
 
-            {/* ================= EDUCATION ================= */}
+            {/* ================= EXPERIENCE ================= */}
             <div className="inner">
+                <h2 className="custom-title mb--30 tmp-scroll-trigger tmp-fade-in animation-order-1">
+                    Experience{" "}
+                    <span>
+                        <img src="assets/images/custom-line/custom-line.png" alt="custom-line" />
+                    </span>
+                </h2>
+
+                <div className="row g-5">
+
+                    {/* Software Engineer */}
+                    <div className="col-sm-12">
+                        <div className="education-experience-card tmp-scroll-trigger tmponhover tmp-fade-in animation-order-1">
+                            <h4 className="edu-sub-title">Software Engineer</h4>
+                            <h2 className="edu-title">Jun 2024 - Present</h2>
+                            <p className="edu-para">
+                                Veenus Software Solutions, Amritsar.
+                            </p>
+                            <ul className="mb-0 custom-list">
+                                <li><span className='text-white fw-bold'>Full Stack Development:</span> Engineered web applications using React.js, Node.js, Express.js, and
+                                    MySQL.</li>
+                                <li><span className='text-white fw-bold'>Frontend Integration:</span> Developed responsive UI components and connected them with RESTful
+                                    APIs.</li>
+                                <li><span className='text-white fw-bold'>Security Implementation:</span> Applied JWT and RBAC for secure authentication and authorization.</li>
+                                <li><span className='text-white fw-bold'>Performance Optimization:</span> Optimized backend logic and database queries to improve scalability.</li>
+                                <li><span className='text-white fw-bold'>Collaboration:</span> Worked with cross-functional teams to deliver production-ready applications.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* Assistant Software Developer */}
+                    <div className="col-sm-12">
+                        <div className="education-experience-card tmp-scroll-trigger tmponhover tmp-fade-in animation-order-2">
+                            <h4 className="edu-sub-title">Assistant Software Developer</h4>
+                            <h2 className="edu-title">Jul 2021 - Jul 2022</h2>
+                            <p className="edu-para">
+                                Veenus Software Solutions, Amritsar.
+                            </p>
+                            <ul className="mb-0 custom-list">
+                                <li><span className='text-white fw-bold'>Full Stack Support:</span> Contributed to Node.js, Express.js, React.js, and MySQL applications.</li>
+                                <li><span className='text-white fw-bold'>UI/Backend Assistance:</span> Assisted in creating frontend components and integrating backend APIs.</li>
+                                <li><span className='text-white fw-bold'>Debugging & Testing:</span> Performed code debugging, testing, and performance enhancements.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* Intern */}
+                    <div className="col-sm-12">
+                        <div className="education-experience-card tmp-scroll-trigger tmponhover tmp-fade-in animation-order-3">
+                            <h4 className="edu-sub-title">Full Stack Developer Intern</h4>
+                            <h2 className="edu-title">Jan 2021 - Jun 2021</h2>
+                            <p className="edu-para">
+                                VMM Education, Amritsar.
+                            </p>
+                            <ul className="mb-0 custom-list">
+                                <li><span className='text-white fw-bold'>Hands-On Training:</span> Acquired experience in Node.js, Express.js, and MySQL full stack
+                                    development.</li>
+                                <li><span className='text-white fw-bold'>API Support:</span> Supported creation of RESTful APIs and database-driven applications.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            {/* ================= EDUCATION ================= */}
+            <div className="inner pt--60">
                 <div className="section-head text-align-left mb--50">
                     <h2 className="custom-title mb--20 tmp-scroll-trigger tmp-fade-in animation-order-1">
                         Education{" "}
@@ -15,57 +81,35 @@ function Resume() {
                     </h2>
 
                     <h2 className="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
-                        Elevate your brand with a the
+                        Academic Background
                     </h2>
 
                     <p className="description tmp-scroll-trigger tmp-fade-in animation-order-3">
-                        ished fact that a reader will be distrol acted bioiiy desig ished fact
-                        that a reader <br /> will acted ished fact that a reader will be distrol acted
+                        My academic journey has built a strong foundation in computer science, software
+                        development, and modern web technologies.
                     </p>
                 </div>
 
                 <div className="row g-5">
 
+                    {/* MCA */}
                     <div className="col-lg-6 col-sm-6">
                         <div className="education-experience-card tmp-scroll-trigger tmponhover tmp-fade-in animation-order-1">
-                            <h4 className="edu-sub-title">Trainer Marketing</h4>
-                            <h2 className="edu-title">2005-2009</h2>
+                            <h4 className="edu-sub-title">Master of Computer Applications (MCA)</h4>
+                            <h2 className="edu-title">2022 – 2024</h2>
                             <p className="edu-para">
-                                A personal portfolio is a curated collection of an individual's professional
-                                work, showcasing their skills, experience A personal portfolio.
+                                Amritsar Group of Colleges, Amritsar, Punjab.
                             </p>
                         </div>
                     </div>
 
+                    {/* BCA */}
                     <div className="col-lg-6 col-sm-6">
                         <div className="education-experience-card tmp-scroll-trigger tmponhover tmp-fade-in animation-order-2">
-                            <h4 className="edu-sub-title">Assistant Director</h4>
-                            <h2 className="edu-title">2010-2014</h2>
+                            <h4 className="edu-sub-title">Bachelor of Computer Applications (BCA)</h4>
+                            <h2 className="edu-title">2015 – 2018</h2>
                             <p className="edu-para">
-                                Each project here showcases my commitment to excellence and adaptability,
-                                tailored to meet each client’s unique needs.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-6 col-sm-6">
-                        <div className="education-experience-card tmp-scroll-trigger tmponhover tmp-fade-in animation-order-3">
-                            <h4 className="edu-sub-title">Design Assistant</h4>
-                            <h2 className="edu-title">2008-2012</h2>
-                            <p className="edu-para">
-                                I’ve had the privilege of working with various clients, from startups to
-                                established companies, helping bring their visions to life.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-6 col-sm-6">
-                        <div className="education-experience-card tmp-scroll-trigger tmponhover tmp-fade-in animation-order-4">
-                            <h4 className="edu-sub-title">Design Assistant</h4>
-                            <h2 className="edu-title">2008-2012</h2>
-                            <p className="edu-para">
-                                Each project here showcases my commitment to excellence and adaptability,
-                                tailored to meet each client’s unique needs a personal.
+                                DAV College, Amritsar, Punjab.
                             </p>
                         </div>
                     </div>
@@ -77,23 +121,18 @@ function Resume() {
             <div className="inner pt--60">
                 <div className="row">
 
-                    {/* DESIGN SKILLS */}
+                    {/* FRONTEND & STATE MANAGEMENT */}
                     <div className="col-lg-6">
                         <div className="progress-wrapper">
                             <div className="content">
                                 <h2 className="custom-title mb--30 tmp-scroll-trigger tmp-fade-in animation-order-1">
-                                    Design Skill{" "}
+                                    Frontend & State Skills{" "}
                                     <span>
                                         <img src="assets/images/custom-line/custom-line.png" alt="custom-line" />
                                     </span>
                                 </h2>
 
-                                {[
-                                    { name: "PHOTOSHOP", value: "100%", dur: "0.5s", delay: "0.3s" },
-                                    { name: "FIGMA", value: "95%", dur: "0.6s", delay: "0.4s" },
-                                    { name: "ADOBE XD", value: "60%", dur: "0.7s", delay: "0.5s" },
-                                    { name: "ADOBE ILLUSTRATOR", value: "70%", dur: "0.8s", delay: "0.6s" },
-                                ].map((skill, i) => (
+                                {frontend.map((skill, i) => (
                                     <div className="progress-charts" key={i}>
                                         <h6 className="heading heading-h6">{skill.name}</h6>
                                         <div className="progress">
@@ -112,28 +151,22 @@ function Resume() {
                                         </div>
                                     </div>
                                 ))}
-
                             </div>
                         </div>
                     </div>
 
-                    {/* DEVELOPMENT SKILLS */}
+                    {/* BACKEND, DATABASE & DEVOPS */}
                     <div className="col-lg-6">
                         <div className="progress-wrapper">
                             <div className="content">
                                 <h2 className="custom-title mb--30 tmp-scroll-trigger tmp-fade-in animation-order-1">
-                                    Development Skill{" "}
+                                    Backend & System Skills{" "}
                                     <span>
                                         <img src="assets/images/custom-line/custom-line.png" alt="custom-line" />
                                     </span>
                                 </h2>
 
-                                {[
-                                    { name: "PHOTOSHOP", value: "100%", dur: "0.5s", delay: "0.3s" },
-                                    { name: "FIGMA", value: "95%", dur: "0.6s", delay: "0.4s" },
-                                    { name: "ADOBE XD", value: "60%", dur: "0.7s", delay: "0.5s" },
-                                    { name: "ADOBE ILLUSTRATOR", value: "70%", dur: "0.8s", delay: "0.6s" },
-                                ].map((skill, i) => (
+                                {backend.map((skill, i) => (
                                     <div className="progress-charts" key={i}>
                                         <h6 className="heading heading-h6">{skill.name}</h6>
                                         <div className="progress">
@@ -152,66 +185,7 @@ function Resume() {
                                         </div>
                                     </div>
                                 ))}
-
                             </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            {/* ================= EXPERIENCE ================= */}
-            <div className="inner pt--60">
-                <h2 className="custom-title mb--30 tmp-scroll-trigger tmp-fade-in animation-order-1">
-                    Experience{" "}
-                    <span>
-                        <img src="assets/images/custom-line/custom-line.png" alt="custom-line" />
-                    </span>
-                </h2>
-
-                <div className="row g-5">
-
-                    <div className="col-lg-6 col-sm-6">
-                        <div className="education-experience-card tmp-scroll-trigger tmponhover tmp-fade-in animation-order-1">
-                            <h4 className="edu-sub-title">Jr. Web Developer</h4>
-                            <h2 className="edu-title">2005-2009</h2>
-                            <p className="edu-para">
-                                A personal portfolio is a curated collection of an individual's professional
-                                work, showcasing their skills, experience A personal portfolio.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-6 col-sm-6">
-                        <div className="education-experience-card tmp-scroll-trigger tmponhover tmp-fade-in animation-order-2">
-                            <h4 className="edu-sub-title">Sr. Web Developer</h4>
-                            <h2 className="edu-title">2010-2014</h2>
-                            <p className="edu-para">
-                                Each project here showcases my commitment to excellence and adaptability,
-                                tailored to meet each client’s unique needs.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-6 col-sm-6">
-                        <div className="education-experience-card tmp-scroll-trigger tmponhover tmp-fade-in animation-order-3">
-                            <h4 className="edu-sub-title">Sr. Graphic Designer</h4>
-                            <h2 className="edu-title">2008-2012</h2>
-                            <p className="edu-para">
-                                I’ve had the privilege of working with various clients, from startups to
-                                established companies, helping bring their visions to life.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-6 col-sm-6">
-                        <div className="education-experience-card tmp-scroll-trigger tmponhover tmp-fade-in animation-order-4">
-                            <h4 className="edu-sub-title">Design Assistant</h4>
-                            <h2 className="edu-title">2008-2012</h2>
-                            <p className="edu-para">
-                                Each project here showcases my commitment to excellence and adaptability,
-                                tailored to meet each client’s unique needs a personal.
-                            </p>
                         </div>
                     </div>
 

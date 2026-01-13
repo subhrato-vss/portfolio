@@ -18,7 +18,9 @@ function About() {
                     </h2>
 
                     <h2 className="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
-                        Building Web Solutions<br />
+                        Building Web Solutions
+                    </h2>
+                    <h2 className="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
                         That Work in the Real World
                     </h2>
 
