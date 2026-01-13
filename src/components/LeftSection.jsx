@@ -1,5 +1,3 @@
-import Profile from "../assets/profile-photo.png";
-
 function LeftSection() {
     function downloadFile() {
         const link = document.createElement('a');
@@ -17,10 +15,8 @@ function LeftSection() {
                     <div className="tmp-contact-about-inner">
 
                         <div className="thumbnail" style={{ background: 'linear-gradient(180deg, #380C19 0%, rgba(255, 73, 74, 0) 100%)' }}>
-                        {/* <div className="thumbnail" style={{ background: 'linear-gradient(to top, #ff6a00, #ee0979)' }}> */}
                             <img
-                                // src="/assets/images/logo/banner-user-image-04.png"
-                                src={Profile}
+                                src="/assets/images/profile-photo.png"
                                 alt="contact-img"
                             />
                         </div>
