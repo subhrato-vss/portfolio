@@ -15,6 +15,7 @@ function LeftSection() {
                     <div className="tmp-contact-about-inner">
 
                         <div className="thumbnail" style={{ background: 'linear-gradient(180deg, #380C19 0%, rgba(255, 73, 74, 0) 100%)' }}>
+                            {/* <div className="thumbnail" style={{ background: 'linear-gradient(to top, #ff6a00, #ee0979)' }}> */}
                             <img
                                 src="/assets/images/profile-photo.png"
                                 alt="contact-img"
@@ -22,13 +23,13 @@ function LeftSection() {
                         </div>
 
                         <div className="content">
-                            <div className="title-area">
+                            <div className="title-area text-center">
                                 <h4 className="title">Subhrato Singh</h4>
                                 <span className="subtitle">Full Stack Developer</span>
                             </div>
 
                             <div className="description">
-                                <div className="info-box">
+                                <div className="info-box text-center">
                                     <span className="phone">
                                         Phone: <a href="tel:01941043264">+91 81988 50602</a>
                                     </span>
@@ -39,14 +40,14 @@ function LeftSection() {
                                 </div>
                             </div>
 
-                            <div className="social-area mb--30">
-                                <div className="social-link justify-content-center">
+                            <div className="social-area mb--30 mt-3">
+                                <div className="custom-social-link d-flex justify-content-center">
                                     <a href="https://www.linkedin.com/in/subhrato-singh/" target="_blank"><i className="fa-brands fa-linkedin-in"></i></a>
                                     <a href="https://github.com/subhrato-vss" target="_blank"><i className="fa-brands fa-github"></i></a>
                                 </div>
                             </div>
 
-                            <div className="button-area-banner-one text-xl-center text-start">
+                            <div className="button-area-banner-one d-flex justify-content-center">
                                 <button
                                     className="tmp-btn hover-icon-reverse radius-round download-btn"
                                     onClick={downloadFile}

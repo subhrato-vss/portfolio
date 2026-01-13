@@ -6,11 +6,10 @@ import Contact from "./Contact"
 
 function RightSection() {
     const tabs = [
-        { id: 'Javascript', label: 'About', component: <About />, active: true },
-        { id: 'Design', label: 'My Resume', component: <Resume /> },
-        { id: 'Wordpress', label: 'My Work', component: <Wrok /> },
-        { id: 'settings', label: 'My Blog', component: <Blog /> },
-        { id: 'python', label: 'My Contact', component: <Contact /> }
+        { id: 'About', label: 'About', component: <About />, active: true },
+        { id: 'Resume', label: 'Resume', component: <Resume /> },
+        { id: 'Work', label: 'Work', component: <Wrok /> },
+        { id: 'Contact', label: 'Contact', component: <Contact /> }
     ];
 
     return (

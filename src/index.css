@@ -44,3 +44,45 @@ ul.custom-list li::before {
     left: 0;
     top: 10px;
 }
+.custom-social-link {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.custom-social-link a {
+    width: 40px;
+    height: 40px;
+    color: var(--color-heading);
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.062745098);
+    border-radius: 100%;
+    font-size: 14px;
+}
+
+.custom-social-link a::after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    background: var(--color-primary);
+    opacity: 0.06;
+    transform: scale(0);
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.custom-social-link a:hover {
+    color: #ffffff;
+}
+
+.custom-social-link a:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}

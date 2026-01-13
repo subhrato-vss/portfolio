@@ -16699,6 +16699,7 @@ Section Head
 }
 @media (min-width: 576px) {
   .blog-details-navigation .social-link {
+    /* display: flex; */
     margin-top: 0;
   }
 }
@@ -26332,17 +26333,20 @@ body.tmp-white-version.index-8 .tmp-contact-about-inner .info-box {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .tmp-contact-about-inner .social-link {
-    justify-content: flex-start !important;
+    /* justify-content: flex-start !important; */
+      justify-content: center !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .tmp-contact-about-inner .social-link {
-    justify-content: flex-start !important;
+    /* justify-content: flex-start !important; */
+      justify-content: center !important;
   }
 }
 @media only screen and (max-width: 767px) {
   .tmp-contact-about-inner .social-link {
-    justify-content: flex-start !important;
+    /* justify-content: flex-start !important; */
+      justify-content: center !important;
   }
 }
 .tmp-contact-about-inner::after {

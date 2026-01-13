@@ -62,18 +62,30 @@ export default function SectionSkeleton() {
                                         mb: 4,
                                     }}
                                 >
-                                    {[1, 2, 3, 4, 5].map((i) => (
+                                    {[1, 2, 3, 4].map((i) => (
                                         <Skeleton
                                             key={i}
                                             variant="rounded"
-                                            height={75}
+                                            // height={75}
                                             sx={{
                                                 ...sk,
-                                                flex: 1,       // 👈 each takes equal width
-                                                borderRadius: "10px"
+                                                flex: {
+                                                    xs: "0 0 50px",   // mobile
+                                                    sm: "0 0 80px",  // tablet
+                                                    md: "0 0 138px",  // laptop+
+                                                },
+                                                height: {
+                                                    xs: 30,   // mobile height
+                                                    sm: 45,   // tablet
+                                                    md: 75,   // desktop
+                                                },
+                                                borderRadius: "10px",
                                             }}
                                         />
                                     ))}
+
+                                    {/* Empty tab space */}
+                                    <Box sx={{ flex: 1 }} />
                                 </Box>
 
                                 {/* About area */}
